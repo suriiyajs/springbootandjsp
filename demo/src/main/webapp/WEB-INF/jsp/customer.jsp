@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ben's Car Insurance | Customer List</title>
+<title>Policy details</title>
 <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>

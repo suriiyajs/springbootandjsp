@@ -1,0 +1,7 @@
+package com.suriya.insurance.controller.model;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public class PolicyRepository implements JpaRepository<T, ID> {
+
+}

@@ -1,0 +1,15 @@
+package com.suriya.insurance.po;
+
+public class CustomerPo {
+	private String Customer;
+	
+
+	public String getCustomer() {
+		return Customer;
+	}
+
+	public void setCustomer(String customer) {
+		Customer = customer;
+	}
+
+}

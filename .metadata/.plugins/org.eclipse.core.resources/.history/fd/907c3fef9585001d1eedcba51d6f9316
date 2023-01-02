@@ -1,0 +1,5 @@
+package com.suriya.insurance.controller.model;
+
+public class UserRepository {
+
+}

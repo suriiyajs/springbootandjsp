@@ -1,0 +1,257 @@
+package com.suriya.insurance.controller.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Customer {
+		@Id
+		 public Integer policyid;
+		 public String customerName;
+		 public String address;
+		 public String pinCode;
+		 public String contact;
+		 public String email;
+		 public String gender;
+		 public String dateOfBirth;
+		 public String vehicleManufacturer;
+		 public String vehicleModel; 
+		 public String vehicleVIN;
+		 public String vehiclePrice;
+		 public String vehicleYearOfManufacture;
+		 public String vehiclecc;
+		 public String coverageStartingDate;
+		 
+		 
+		 public double depreciation;
+		 public double suminsured;
+		 public double ownpremium;
+		 public double discount;
+		 public double totalownpremium;
+		 public double thirdparty;
+		 public int  pacover;
+		 public double netpremium;
+		 public double servicetax;
+		 public double totalpremium;
+		 public double finalpremium;
+		 
+		 
+		
+		
+		public double getOwnpremium() {
+			return ownpremium;
+		}
+		public void setOwnpremium(double ownpremium) {
+			this.ownpremium = ownpremium;
+		}
+		public double getDiscount() {
+			return discount;
+		}
+		public void setDiscount(double discount) {
+			this.discount = discount;
+		}
+		public double getTotalownpremium() {
+			return totalownpremium;
+		}
+		public void setTotalownpremium(double totalownpremium) {
+			this.totalownpremium = totalownpremium;
+		}
+		public double getThirdparty() {
+			return thirdparty;
+		}
+		public void setThirdparty(double thirdparty) {
+			this.thirdparty = thirdparty;
+		}
+		public int getPacover() {
+			return pacover;
+		}
+		public void setPacover(int pacover) {
+			this.pacover = pacover;
+		}
+		public double getNetpremium() {
+			return netpremium;
+		}
+		public void setNetpremium(double netpremium) {
+			this.netpremium = netpremium;
+		}
+		public double getServicetax() {
+			return servicetax;
+		}
+		public void setServicetax(double servicetax) {
+			this.servicetax = servicetax;
+		}
+		public double getTotalpremium() {
+			return totalpremium;
+		}
+		public void setTotalpremium(double totalpremium) {
+			this.totalpremium = totalpremium;
+		}
+		public double getFinalpremium() {
+			return finalpremium;
+		}
+		public void setFinalpremium(double finalpremium) {
+			this.finalpremium = finalpremium;
+		}
+		public Integer getPolicyid() {
+			return policyid;
+		}
+		public void setPolicyid(Integer policyid) {
+			this.policyid = policyid+(int)(Math.random()*(200-policyid));
+		}
+		public String getCustomerName() {
+			return customerName;
+		}
+		public void setCustomerName(String customerName) {
+			this.customerName = customerName;
+		}
+		public String getAddress() {
+			return address;
+		}
+		public void setAddress(String address) {
+			this.address = address;
+		}
+		public String getPinCode() {
+			return pinCode;
+		}
+		public void setPinCode(String pinCode) {
+			this.pinCode = pinCode;
+		}
+		public String getContact() {
+			return contact;
+		}
+		public void setContact(String contact) {
+			this.contact = contact;
+		}
+		public String getEmail() {
+			return email;
+		}
+		public void setEmail(String email) {
+			this.email = email;
+		}
+		public String getGender() {
+			return gender;
+		}
+		public void setGender(String gender) {
+			this.gender = gender;
+		}
+		public String getDateOfBirth() {
+			return dateOfBirth;
+		}
+		public void setDateOfBirth(String dateOfBirth) {
+			this.dateOfBirth = dateOfBirth;
+		}
+		public String getVehicleModel() {
+			return vehicleModel;
+		}
+		public void setVehicleModel(String vehicleModel) {
+			this.vehicleModel = vehicleModel;
+		}
+		public String getVehicleVIN() {
+			return vehicleVIN;
+		}
+		public void setVehicleVIN(String vehicleVIN) {
+			this.vehicleVIN = vehicleVIN;
+		}
+		public String getVehicleYearOfManufacture() {
+			return vehicleYearOfManufacture;
+		}
+		public void setVehicleYearOfManufacture(String vehicleYearOfManufacture) {
+			this.vehicleYearOfManufacture = vehicleYearOfManufacture;
+		}
+		public String getVehicleManufacturer() {
+			return vehicleManufacturer;
+		}
+		public void setVehicleManufacturer(String vehicleManufacturer) {
+			this.vehicleManufacturer = vehicleManufacturer;
+		}
+		public String getVehiclePrice() {
+			return vehiclePrice;
+		}
+		public void setVehiclePrice(String vehiclePrice) {
+			this.vehiclePrice = vehiclePrice;
+		}
+		public String getVehiclecc() {
+			return vehiclecc;
+		}
+		public void setVehiclecc(String vehiclecc) {
+			this.vehiclecc = vehiclecc;
+		}
+		public String getCoverageStartingDate() {
+			return coverageStartingDate;
+		}
+		public void setCoverageStartingDate(String coverageStartingDate) {
+			this.coverageStartingDate = coverageStartingDate;
+		}
+		@Override
+		public String toString() {
+			return "Customer [policyid=" + policyid + ", customerName=" + customerName + ", address=" + address
+					+ ", pinCode=" + pinCode + ", contact=" + contact + ", email=" + email + ", gender=" + gender
+					+ ", dateOfBirth=" + dateOfBirth + ", vehicleManufacturer=" + vehicleManufacturer
+					+ ", vehicleModel=" + vehicleModel + ", vehicleVIN=" + vehicleVIN + ", vehiclePrice=" + vehiclePrice
+					+ ", vehicleYearOfManufacture=" + vehicleYearOfManufacture + ", coverageStartingDate="
+					+ coverageStartingDate + "]";
+		}
+		
+		public Customer() {
+			super();
+		}
+
+		public void setDepreciation(String year) {
+			int yr=Integer.parseInt(year);
+			createdepreciation(yr);
+//		    int num = 2022-yr;
+//		    if (num < 1) {
+//		    	this.depreciation= 0.5;
+//		    } else if (num > 1&& num<3) {
+//		    	
+//		    	this.depreciation =10.0;
+//		    } else if(num > 3&& num<5) {
+//		    	
+//		    	this.depreciation= 20.0;
+//		    }else {
+//		    	
+//		    	this.depreciation= 40.0;
+//		    }
+	}
+			
+		private void createdepreciation(int i) {
+			int num = 2022-i;
+		    if (num < 1) {
+		    	this.depreciation= 0.5;
+		    } else if (num > 1&& num<3) {
+		    	
+		    	this.depreciation =10.0;
+		    } else if(num > 3&& num<5) {
+		    	
+		    	this.depreciation= 20.0;
+		    }else {
+		    	
+		    	this.depreciation= 40.0;
+		    }
+			// TODO Auto-generated method stub
+			
+		}
+		public double getDepreciation() {
+			return depreciation;
+		}
+		public double getSuminsured() {
+			return suminsured;
+		}
+//		public void setSuminsured(double suminsured) {
+//			this.suminsured =Double.parseDouble(vehiclePrice)-depreciation; 
+//		}
+//		public void setSuminsured(String vehiclePrice2) {
+//			// TODO Auto-generated method stub
+//			this.suminsured=Double.parseDouble(vehiclePrice2)
+//			
+//		}
+		public void setSuminsured(String vehiclePrice2, double depreciation2) {
+			// TODO Auto-generated method stub
+			this.suminsured=Double.parseDouble(vehiclePrice2)-((depreciation2/100)*Double.parseDouble(vehiclePrice2));
+		}
+	
+		
+
+}

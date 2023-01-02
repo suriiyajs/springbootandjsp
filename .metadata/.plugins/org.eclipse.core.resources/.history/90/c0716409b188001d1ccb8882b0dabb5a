@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ben's Car Insurance | Customer List</title>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div align="center">
+		<h1>Customer List</h1>
+		<h3><p> Wanted To be Our Customer</p>
+		<a href="newprofile">Create Profile</a></h3>	
+				
+		<table border="1">
+		<tr>
+			<th>Policy Id</th>
+			<th>Ex-Showroom Price</th>
+			<th>Depreciation Value</th>
+			<th>Insured Declared value</th>
+			<th>Own Damage Premium</th>
+			<th>Discount </th>
+			<th>Total Own Premium</th>
+			<th>Third Party Premium</th>
+			<th>PA cover</th>
+			<th>Net Premium</th>
+			<th>Service Tax</th>
+			<th>Total Premium</th>
+			<th>Final Premium</th>
+			<th>Action</th>
+		</tr>	
+		<c:forEach var="customer" items="${result}" varStatus="status">
+		<tr>
+			<td>${result.email}</td>
+			<td>${result.password}</td>
+			<td>${result.id}</td>
+
+          <td><a href="newprofile" id="newprofile">Edit Profile</a></td>
+		</tr>
+		</c:forEach>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+package com.suriya.insurance.controller.model;
+
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+
+public class Customer {
+		@Id
+		@GeneratedValue(strategy=GenerationType.IDENTITY)
+		 public Integer custId;
+		 public String customerName;
+		 public String address;
+		 public String pinCode;
+		 public String contact;
+		 public String email;
+		 public String gender;
+		 public String dateOfBirth;
+		 public String vehicleModel; 
+		 public String vehicleVIN;
+		 public String vehicleRcNumber;
+		 public String vehicleYearOfManufacture;
+		 public String vehicleChasisNumber;
+		 
+		 
+		public Integer getCustId() {
+			return custId;
+		}
+		public void setCustId(Integer custId) {
+			this.custId = custId;
+		}
+		
+		public String getCustomerName() {
+			return customerName;
+		}
+		public void setCustomerName(String customerName) {
+			this.customerName = customerName;
+		}
+		public String getAddress() {
+			return address;
+		}
+		public void setAddress(String address) {
+			this.address = address;
+		}
+		public String getPinCode() {
+			return pinCode;
+		}
+		public void setPinCode(String pinCode) {
+			this.pinCode = pinCode;
+		}
+		public String getContact() {
+			return contact;
+		}
+		public void setContact(String contact) {
+			this.contact = contact;
+		}
+		public String getEmail() {
+			return email;
+		}
+		public void setEmail(String email) {
+			this.email = email;
+		}
+		public String getGender() {
+			return gender;
+		}
+		public void setGender(String gender) {
+			this.gender = gender;
+		}
+		public String getDateOfBirth() {
+			return dateOfBirth;
+		}
+		public void setDateOfBirth(String dateOfBirth) {
+			this.dateOfBirth = dateOfBirth;
+		}
+		public String getVehicleModel() {
+			return vehicleModel;
+		}
+		public void setVehicleModel(String vehicleModel) {
+			this.vehicleModel = vehicleModel;
+		}
+		public String getVehicleVIN() {
+			return vehicleVIN;
+		}
+		public void setVehicleVIN(String vehicleVIN) {
+			this.vehicleVIN = vehicleVIN;
+		}
+		public String getVehicleRcNumber() {
+			return vehicleRcNumber;
+		}
+		public void setVehicleRcNumber(String vehicleRcNumber) {
+			this.vehicleRcNumber = vehicleRcNumber;
+		}
+		public String getVehicleYearOfManufacture() {
+			return vehicleYearOfManufacture;
+		}
+		public void setVehicleYearOfManufacture(String vehicleYearOfManufacture) {
+			this.vehicleYearOfManufacture = vehicleYearOfManufacture;
+		}
+		public String getVehicleChasisNumber() {
+			return vehicleChasisNumber;
+		}
+		public void setVehicleChasisNumber(String vehicleChasisNumber) {
+			this.vehicleChasisNumber = vehicleChasisNumber;
+		}
+		 
+		
+
+		
+
+		private List <Customer> customer; 
+		
+		 public List <Customer> getCustomer() {
+			return customer;
+		}
+		public void setCustomer(List <Customer> customer) {
+			this.customer = customer;
+		}
+
+}

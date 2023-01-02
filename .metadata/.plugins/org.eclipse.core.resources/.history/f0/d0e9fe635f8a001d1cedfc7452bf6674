@@ -1,0 +1,50 @@
+package com.suriya.insurance.controller.model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.suriya.insurance.controller.model.Customer;
+import com.suriya.insurance.controller.model.CustomerRepository;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+
+@Entity
+public class Policy {
+	@Id
+	int policyid;
+	String customername;
+    String showroomprice;
+    String yearofmanufacturing;
+    String vehiclecc;
+    String dateofbirth;
+    
+    
+	 double suminsured;
+	 double ownpremium;
+	 double discount;
+	 double totalownpremium;
+	 double thirdparty;
+	 int  pacover;
+	 double netpremium;
+	 double servicetax;
+	 double totalpremium;
+	 double finalpremium;
+	 
+	 @Autowired
+	 CustomerRepository cusRepo;
+
+	 Customer cus =new Customer();
+	 
+	 
+	 
+	public String getCustomername() {
+		return customername;
+	}
+	public void setCustomername(String customername) {
+		this.customername = cus.getCustomerName();
+	}
+	 
+    
+	
+}

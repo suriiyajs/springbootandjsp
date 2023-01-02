@@ -1,0 +1,15 @@
+package com.suriya.insurance.controller.model;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.ui.Model;
+
+
+public interface UserRepository extends JpaRepository<User,Integer> {
+
+
+	User findByEmail(Model m);
+
+	User findByEmail(String string);
+
+
+}

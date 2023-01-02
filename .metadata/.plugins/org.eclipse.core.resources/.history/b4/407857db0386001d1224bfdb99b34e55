@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<head>
+<title>Home</title>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+		<style>
+		body{
+		background-color :#9A616D;
+		}
+		</style>
+<style>
+div.ex {
+	text-align: right width:300px;
+	padding: 10px;
+	border: 5px solid grey;
+	margin: 0px
+}
+</style>
+</head>
+<body>
+<h2>${welcomeuser}</h2>
+
+	<h2>Welcome ${name} To Vehicle Insurance System !!!</h2>
+	
+	<hr>
+			<div class="dropdown">
+		  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+		    Profile
+		  </button>
+		  <ul class="dropdown-menu">
+		    <li><a href="customerlist" id="newprofile">View Our Customers</a></li>
+		    <li><a href="newprofile" id="newprofile">Create New Profile </a></li>
+		    <li><a href="viewprofile" id="viewprofile">View Profile </a></li>
+		    <li><a href="editprofile" id="editprofile">Edit Existing Profile </a></li>
+		
+		  </ul>
+		</div>
+		
+		<a href="policy" id="policy">Policy</a>&nbsp;&nbsp;
+		
+		<a href="claim" id="claim">Claim</a>&nbsp;&nbsp;
+		
+		<a href="contact" id="contactus">Contact Us</a>&nbsp;&nbsp;
+		
+		<a href="logout" id="logout">Sign Out</a>&nbsp;&nbsp;
+	<hr>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+package com.suriya.insurance.controller.model;
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.suriya.insurance.controller.model.Customer;
+ 
+public interface CustomerRepository extends JpaRepository<Customer,Integer> {
+
+
+	Customer findByCustomerName(String customerName);
+	
+}

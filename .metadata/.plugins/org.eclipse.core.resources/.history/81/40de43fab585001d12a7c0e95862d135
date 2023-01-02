@@ -1,0 +1,104 @@
+package com.suriya.insurance.controller;
+import java.io.IOException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.suriya.insurance.controller.model.Customer;
+import com.suriya.insurance.controller.model.CustomerRepository;
+import com.suriya.insurance.controller.model.User;
+import com.suriya.insurance.controller.model.UserRepository;
+
+@Controller
+public class LoginController {
+
+	@Autowired
+	private UserRepository userRepo;
+	@Autowired
+	private CustomerRepository customerRepository; 
+			
+	@GetMapping("/")
+	public String loginPage() {
+		return "login";
+	}
+	@PostMapping("/home")
+		public String loginPage(Model model,@RequestParam("email")String email,@RequestParam("password")String password)throws IOException  {
+			User u = null;
+			try {
+				u=userRepo.findByEmail(email);
+			}catch(Exception e) {
+				System.out.println("Hi");
+			}
+			if(u!=null) {
+				model.addAttribute("welcomeuser","Welcome to JS Insurance");
+				return"welcome";
+			}
+			model.addAttribute("kindlyregister","Do not Have an account?please Create One.");
+			return "login";
+		}
+	@GetMapping("/home")
+	public String homePageGet(Model model,@RequestParam("email")String email,@RequestParam("password")String password) throws IOException {
+		return loginPage( model,email,password) ;
+	}
+	@GetMapping("/logout")
+	public String logoutPage() {
+		return "login";
+	}
+	@GetMapping("/register")
+	public String registerPage() {
+		return "register";
+	}
+	@PostMapping("/set-user")
+	public String registrationToLogin(@RequestParam("email")String email,@RequestParam("password1")String password1,
+			@RequestParam("password2")String password2,Model model) {
+		if(password1.equals(password2)) {
+			User u=new User();
+			u.setId(1);
+			u.setEmail(email);
+			u.setPassword(password1);
+			userRepo.save(u);
+			model.addAttribute("Successful", "Registration done Successful.");
+			return "login";
+		}else {
+			model.addAttribute("registrationerror", "Password Does Not Match!");
+		}
+		return "register";
+		
+	}
+	@GetMapping("/newprofile")
+	public String personalInformationPage() {
+		return "profile";
+	}
+	@PostMapping("/save-newprofile")
+	public String personalTovehicle(@RequestParam("customerName")String customerName ,@RequestParam("address")String address,
+			@RequestParam("pinCode")int pinCode,@RequestParam("email")String email,@RequestParam("gender")String gender,@RequestParam("contact")String contact,@RequestParam("dateOfBirth")String dateOfBirth,@RequestParam("vehicleModel")String vehicleModel,@RequestParam("vehicleVIN")String vehicleVIN,@RequestParam("vehicleChasisnumber")String vehicleChasisnumber,
+			@RequestParam("vehicleRcnumber")String vehicleRcnumber,@RequestParam("vehicleYearofmanufacture")String vehicleYearofmanufacture,Model model){
+			Customer c= new Customer();
+			c.setCustomerName(customerName);
+			c.setAddress(address);
+			c.setPinCode(pinCode);
+			c.setGender(gender);
+			c.setEmail(email);
+			c.setContact(contact);
+			c.setDateOfBirth(dateOfBirth);
+		    c.setVehicleModel(vehicleModel);
+		    c.setVehicleChasisNumber(vehicleChasisnumber);
+		    c.setVehicleRcNumber(vehicleRcnumber);
+		    c.setVehicleVIN(vehicleVIN);
+		    c.setVehicleYearOfManufacture(vehicleYearofmanufacture);
+			customerRepository.save(c);
+			model.addAttribute("AddednewCustomer","New Customer was Created");
+			return "profile";
+			}
+	}
+	
+	
+	
+	
+	
+
+	

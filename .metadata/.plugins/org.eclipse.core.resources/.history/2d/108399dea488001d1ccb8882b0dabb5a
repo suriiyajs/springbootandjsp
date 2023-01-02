@@ -1,0 +1,23 @@
+package com.suriya.insurance.controller.model;
+
+import com.suriya.insurance.controller.model;
+
+public class Policy {
+    double showroomprice;
+    
+   
+    CustomerRepository customerRepo;
+    Customer cus= new Customer(customerRepo.findById(4904));
+   
+
+	public double getShowroomprice() {
+		return showroomprice;
+	}
+
+	public void setShowroomprice(double showroomprice) {
+		
+		this.showroomprice = showroomprice;
+	}
+	
+	
+}

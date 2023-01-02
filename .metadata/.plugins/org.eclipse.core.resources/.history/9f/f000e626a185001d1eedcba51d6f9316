@@ -1,0 +1,10 @@
+package com.suriya.insurance.controller.model;
+
+public class CustomerRepository {
+
+	public void save(Customer c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

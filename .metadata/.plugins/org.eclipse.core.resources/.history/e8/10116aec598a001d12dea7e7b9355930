@@ -1,0 +1,119 @@
+//package com.suriya.insurance.controller.model;
+//
+//import com.suriya.insurance.controller.model.Customer;
+//import com.suriya.insurance.controller.model.CustomerRepository;
+//public class Policy {
+//    String showroomprice;
+//    String yearofmanufacturing;
+//    String vehiclecc;
+//    String dateofbirth;
+//    
+//    
+//    
+//    double finalpremium=createpremium(showroomprice,depreciation,thirdparty,pacover);
+//    double depreciation=createdep(showroomprice,yearofmanufacturing);
+//    double thirdparty=createthird(vehiclecc);
+//    int pacover=createpa(dateofbirth);
+//    
+//   
+//    CustomerRepository customerRepo;
+//    Customer cus=customerRepo.findById(4904); 
+//   
+//    
+//
+//	private double createdep(String price, String year) {	
+//		return 20.0;
+//	}
+//    
+//	
+//	private int createpa(String dateofbirth2) {
+//		// TODO Auto-generated method stub
+//		return 500;
+//	}
+//
+//
+//	private double createthird(String vehiclecc2) {
+//		
+//		return 1000.0;
+//	}
+//
+//
+//	public String getShowroomprice() {
+//		return showroomprice;
+//	}
+//
+//	public void setShowroomprice(double showroomprice) {
+//		this.showroomprice = cus.getVehiclePrice();
+//	}
+//
+//
+//	public String getYearofmanufacturing() {
+//		return yearofmanufacturing;
+//	}
+//
+//
+//	public void setYearofmanufacturing(String yearofmanufacturing) {
+//		this.yearofmanufacturing = cus.getVehicleYearOfManufacture();
+//	}
+//
+//
+//	public String getVehiclecc() {
+//		return vehiclecc;
+//	}
+//
+//
+//	public void setVehiclecc(String vehiclecc) {
+//		this.vehiclecc = vehiclecc;
+//	}
+//
+//
+//	public String getDateofbirth() {
+//		return dateofbirth;
+//	}
+//
+//
+//	public void setDateofbirth(String dateofbirth) {
+//		this.dateofbirth = cus.getDateOfBirth();
+//	}
+//
+//
+//	public double getFinalpremium() {
+//		return finalpremium;
+//	}
+//
+//
+//	public void setFinalpremium(double finalpremium) {
+//		this.finalpremium = finalpremium;
+//	}
+//
+//
+//	public double getDepreciation() {
+//		return depreciation;
+//	}
+//
+//
+//	public void setDepreciation(double depreciation) {
+//		this.depreciation = depreciation;
+//	}
+//
+//
+//	public double getThirdparty() {
+//		return thirdparty;
+//	}
+//
+//
+//	public void setThirdparty(double thirdparty) {
+//		this.thirdparty = thirdparty;
+//	}
+//
+//
+//	public int getPacover() {
+//		return pacover;
+//	}
+//
+//
+//	public void setPacover(int pacover) {
+//		this.pacover = pacover;
+//	}
+//	
+//}
